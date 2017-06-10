@@ -27,6 +27,7 @@ namespace doubletinium.Common
         public static string AUT_URL = "https://doubletinium.demojoomla.com/administrator/index.php";
         public static string SUPER_ADMIN_ID = "doubletinium";
         public static string SUPER_ADMIN_PASS = "123456";
+        public static string SUPER_USER = "DoubleT";
         public static string TEST_USER_ID = "usertesting";
         public static string TEST_USER_PASS = "test123456";
 
