@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 
@@ -10,6 +6,9 @@ namespace doubletinium.Common
 {
     class Settings
     {
+        //ENVIRONMENT
+        public static string BROWSER = "chrome";
+
         //PROJECT 
         public static string ROOT_DIR
         {
