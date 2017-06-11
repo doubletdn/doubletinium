@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace doubletinium.Common
+namespace doubletinium.PageObjects.Joomla
 {
-    class ElementDefinition
+    public class AbstractPage
     {
-        public static By Id(string id)
+        public static void OpenLeftTab(string tabName)
         {
-            return By.Id(id);
+            
+
         }
+
     }
 }

@@ -1,6 +1,9 @@
 ﻿using OpenQA.Selenium.Support.PageObjects;
 using doubletinium.Factory;
 using doubletinium.PageObjects.Joomla;
+using System;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace doubletinium.Factory
 {
@@ -21,6 +24,11 @@ namespace doubletinium.Factory
         public static ControlPanelPage ControlPanel
         {
             get { return GetPage<ControlPanelPage>(); }
+        }
+
+        public static UsersPage Users
+        {
+            get { return GetPage<UsersPage>(); }
         }
     }
 }

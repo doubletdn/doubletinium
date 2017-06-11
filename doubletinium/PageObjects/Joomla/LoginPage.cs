@@ -1,12 +1,13 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using doubletinium.Common;
 
 
 namespace doubletinium.PageObjects.Joomla
 {
     public class LoginPage
     {
-        [FindsBy(How = How.Name, Using = "username")]
+        [FindsBy(How = How.Name, Using = "username")],
         private IWebElement UserName { get; set; }
 
         [FindsBy(How = How.Name, Using = "passwd")]
@@ -17,9 +18,9 @@ namespace doubletinium.PageObjects.Joomla
 
         public void LoginJoomla(string username, string password)
         {
-            UserName.SendKeys(username);
-            Password.SendKeys(password);
-            Login.Click();
+            UserName.EnterText(username);
+            Password.EnterText(password);
+            Login.ClickOn();
         }
 
     }
