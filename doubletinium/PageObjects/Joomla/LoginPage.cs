@@ -7,7 +7,7 @@ namespace doubletinium.PageObjects.Joomla
 {
     public class LoginPage
     {
-        [FindsBy(How = How.Name, Using = "username")],
+        [FindsBy(How = How.Name, Using = "username")]
         private IWebElement UserName { get; set; }
 
         [FindsBy(How = How.Name, Using = "passwd")]
