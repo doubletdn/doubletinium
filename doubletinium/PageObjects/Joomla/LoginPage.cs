@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using doubletinium.Common;
+using doubletinium.Factory;
 
 
 namespace doubletinium.PageObjects.Joomla
