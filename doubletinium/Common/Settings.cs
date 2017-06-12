@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 
@@ -10,6 +6,9 @@ namespace doubletinium.Common
 {
     class Settings
     {
+        //ENVIRONMENT
+        public static string BROWSER = "chrome";
+
         //PROJECT 
         public static string ROOT_DIR
         {
@@ -27,6 +26,7 @@ namespace doubletinium.Common
         public static string AUT_URL = "https://doubletinium.demojoomla.com/administrator/index.php";
         public static string SUPER_ADMIN_ID = "doubletinium";
         public static string SUPER_ADMIN_PASS = "123456";
+        public static string SUPER_USER = "DoubleT";
         public static string TEST_USER_ID = "usertesting";
         public static string TEST_USER_PASS = "test123456";
 

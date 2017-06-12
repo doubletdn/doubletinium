@@ -10,20 +10,23 @@ using System.Reflection;
 using System.Diagnostics;
 using doubletinium.Common;
 
-
-
 namespace doubletinium
 {
     class Program
     {
-        public static string AssemblyDirectory
+        private static string abc;
+        public static string ABC
         {
             get
             {
-                string codeBase = Assembly.GetExecutingAssembly().CodeBase;
-                UriBuilder uri = new UriBuilder(codeBase);
-                string path = Uri.UnescapeDataString(uri.Path);
-                return Path.GetDirectoryName(path);
+                if (abc == null)
+                    throw new EntryPointNotFoundException("abc should not null");
+                return abc;
+
+            }
+            set
+            {
+                abc = value;
             }
         }
         static void Main(string[] args)
@@ -36,9 +39,11 @@ namespace doubletinium
             //string pathFinal = Path.GetDirectoryName(path);
             //string classDir = Settings.ROOT_DIR;
 
-            string assemblyname = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-            string path = AppDomain.CurrentDomain.BaseDirectory;
-            string solutionDir = path.Substring(0, path.LastIndexOf(assemblyname) + assemblyname.Length);
+
+            
+            ABC = "test string";
+            Debug.WriteLine(ABC);
+
             //string path = AssemblyDirectory;
             //Debug.WriteLine(AssemblyDirectory);
 
