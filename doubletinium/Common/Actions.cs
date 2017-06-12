@@ -12,6 +12,13 @@ namespace doubletinium.Common
 {
     public static class Action
     {
+        public static void JsClickOn(this IWebElement element)
+        //action click on element using javascript
+        {
+            string js = "arguments[0].click();";
+            ((IJavaScriptExecutor)BrowserFactory.Driver).ExecuteScript(js, element);
+        }
+
         public static void EnterText(this IWebElement element, string value)
         //action EnterText
         {
