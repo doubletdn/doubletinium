@@ -66,7 +66,12 @@
     <Compile Include="Common\Settings.cs" />
     <Compile Include="Factory\BrowserFactory.cs" />
     <Compile Include="Factory\Page.cs" />
-    <Compile Include="FeatureCollection\LoginToJoomlaSteps.cs" />
+    <Compile Include="FeatureCollection\LoginToJoomla.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginToJoomla.feature</DependentUpon>
+    </Compile>
+    <Compile Include="FeatureSteps\LoginToJoomla_Steps.cs" />
     <Compile Include="Functional\Demo.cs" />
     <Compile Include="PageObjects\Joomla\AbstractPage.cs" />
     <Compile Include="PageObjects\Joomla\ControlPanelPage.cs" />
@@ -79,20 +84,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SpecFlowFeature1.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="FeatureCollection\LoginToJoomla.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginToJoomla.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="SpecFlowFeature1.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SpecFlowFeature1.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +112,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

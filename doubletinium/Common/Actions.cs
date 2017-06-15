@@ -12,18 +12,18 @@ namespace doubletinium.Common
 {
     public static class Action
     {
-        public static IWebElement FindDynamicElementByXpath(string pattern, string dynamicValue)
-        {
+        //public static IWebElement FindDynamicElementByXpath(string pattern, string dynamicValue)
+        //{
             //IWebElement e;
             //StringBuilder fullXpath = 
             //e = BrowserFactory.Driver.FindElement(By.XPath(elementUniqueProperty));
-            return e;
-        }
+            //return e;
+        //}
         public static void JsClickOn(this IWebElement element)
         //action click on element using javascript
         {
             string js = "arguments[0].click();";
-            ((IJavaScriptExecutor)BrowserFactory.Driver).ExecuteScript("arguments[0].click();", element);
+            ((IJavaScriptExecutor)BrowserFactory.Driver).ExecuteScript(js, element);
         }
 
         public static void EnterText(this IWebElement element, string value)
