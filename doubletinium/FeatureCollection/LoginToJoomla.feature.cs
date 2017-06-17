@@ -66,25 +66,26 @@ namespace doubletinium.FeatureCollection
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login to Joomla with valid account")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("testuser_1", "Test@123", new string[0])]
-        public virtual void LoginToJoomlaWithValidAccount(string username, string password, string[] exampleTags)
+        public virtual void LoginToJoomlaWithValidAccount()
         {
-            string[] @__tags = new string[] {
-                    "mytag"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to Joomla with valid account", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to Joomla with valid account", new string[] {
+                        "mytag"});
 #line 5
 this.ScenarioSetup(scenarioInfo);
 #line 6
  testRunner.Given("User navigate to Joomla administrator page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Password"});
+            table1.AddRow(new string[] {
+                        "doubletinium",
+                        "123456"});
 #line 7
- testRunner.When(string.Format("User enter valid {0} and valid {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 8
+ testRunner.When("User login with valid account", ((string)(null)), table1, "When ");
+#line 10
  testRunner.Then("User login to Joomla administrator page successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 9
+#line 11
  testRunner.And("Control Panel page display as default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
